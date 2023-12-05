@@ -1,0 +1,17 @@
+[
+    {
+      "prenom": "Maxime",
+      "nom": "DE MOURA",
+      "age": "23"
+    },
+    {
+      "prenom": "Arlette",
+      "nom": "DUBOIS",
+      "age": "50"
+    },
+    {
+      "prenom": "Camille",
+      "nom": "MONTMIGNY",
+      "age": "80"
+    }
+  ]

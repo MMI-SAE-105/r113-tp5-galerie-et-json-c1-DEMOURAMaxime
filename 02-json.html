@@ -14,7 +14,7 @@
     tableau:[
             {prenom : 'Maxime',nom: 'DE MOURA', age: 23 },
             {prenom : 'Arlette',nom: 'DUBOIS', age: 50 },
-            {prenom : 'Cammile',nom: 'MINTMINY', age: 78 }
+            {prenom : 'Camille',nom: 'MINTMINY', age: 80 }
         ],
     
     }">
@@ -25,5 +25,22 @@
         <span x-text="obj.age">age</span>
     </li>
     </template>
+</ul>
+<ul x-data="{
+    async tableauJSON() {
+        const tabJSON = await fetch('main.json');
+        return await tabJSON.json();
+    }
+    
+    }">
+    <li>Tableau JSON</li>
+    <template x-for="obj in tableauJSON">
+        <li>
+            <span x-text="obj.prenom">prenom</span>
+            <span x-text="obj.nom">nom</span>
+            <span x-text="obj.age">age</span>
+        </li>
+    </template>
+  </ul>
 </body>
 </html>
