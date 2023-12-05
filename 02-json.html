@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+<h1>JSON</h1>
+<ul x-data="{
+    tableau:[
+            {prenom : 'Maxime',nom: 'DE MOURA', age: 23 },
+            {prenom : 'Arlette',nom: 'DUBOIS', age: 50 },
+            {prenom : 'Cammile',nom: 'MINTMINY', age: 78 }
+        ],
+    
+    }">
+    <template x-for="obj in tableau">
+    <li>
+        <span x-text="obj.prenom">prenom</span>
+        <span x-text="obj.nom">nom</span>
+        <span x-text="obj.age">age</span>
+    </li>
+    </template>
+</body>
+</html>
