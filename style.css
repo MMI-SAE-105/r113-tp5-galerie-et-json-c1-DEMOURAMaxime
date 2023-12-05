@@ -1,0 +1,50 @@
+.overlay {
+    position: fixed;
+    z-index: 1; /* Sit on top of the page content */
+    width: 100%;/* Full width (cover the whole page) */
+    height: 100%;/* Full height (cover the whole page) */
+    /* Stay at the top */
+    top : 0;
+    left: 0;/* Stay at the left */ 
+    right: 0;/* Stay at the right */
+    bottom: 0;/* Stay at the bottom */
+    background-color: rgba(0,0,0, 0.9);/* Black background with opacity */
+    /* Add a pointer on hover */
+    cursor: pointer;
+    display: grid;/* Use a grid for easy centering */
+    /*align-content: center;
+    justify-content: center;*/
+    place-content: center;
+    /* Center vertically and horizontally */
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+.overlay::after {
+
+    content: "X";/* Add content : "X" */
+    color: #ffffff;/* White text color */
+    background-color: #000000;/* Black background color */
+    font-family: sans-serif;/* Font family "sans-serif" */
+    text-align: center; /* Centered text */
+    line-height: 2rem   ;/* Line height ( idem height ) */
+    display: block;/* Display as a block */
+    position: absolute;/* Position absolute */
+    top: 1em;;/* 1rem from the top */
+    right: 1rem;/* 1rem from the right */
+    width: 2rem;/* 2rem width */
+    height: 2rem;/* 2rem height */
+    border: solid white 2px;/* White border of 2px */
+    border-radius: 50%;/* Rounded border */
+}
+.overlay>figure {
+    max-width: 100%;/* Max width of the figure : 100% */
+    max-height: 100%;/* Max height of the figure : 100% */
+    margin: 0;/* No margin */
+    padding: 1em;/* 1rem padding */
+    border: solid white 2px;/* White border of 2px */
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
